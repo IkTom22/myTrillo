@@ -1,0 +1,35 @@
+.container {
+    //If the screen has enough viewport, use 120rem otherwise use 100vw
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-1);
+    -webkit-box-shadow: var(--shadow-dark);
+            box-shadow: var(--shadow-dark);
+    min-height: 50rem;
+}
+.header {
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--color-grey-light-2);
+}
+.content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    
+}
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    // flex: grow shrink basis
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 18%;
+            flex: 0 0 18%; 
+}
+.hotel-view {
+    background-color: #fff;
+    //flex: 1 means this content grows and occupies the remaining %
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+
+}
