@@ -64,14 +64,13 @@
                     transform: translateY(2px);
         }
 
-
-
     }
     &__icon {
         // with svg, just need height and width
         height: 2rem;
         width: 2rem;
         fill: var(--color-grey-light-4);
+
     }
 }
 
@@ -173,41 +172,18 @@
         height: 100%;
         width: 3px;
         background-color: var(--color-primary);
-        -webkit-transform: scaleY(0);
-                transform: scaleY(0);
-                -webkit-transition: width .4s .2s,
-                            -webkit-transform .2s;
-                transition: width .4s .2s,
-                            -webkit-transform .2s;
-                -webkit-transition: width .4s cubicubic-bezier(1,0,0,1) .2s,
-                            -webkit-transform .2s;
-                transition: width .4s cubicubic-bezier(1,0,0,1) .2s,
-                            -webkit-transform .2s;
-                -webkit-transition: width .4s cubicubic-bezier(1,0,0,1) .2s,
-                            background-color .1s,
-                            -webkit-transform .2s;
-                transition: width .4s cubicubic-bezier(1,0,0,1) .2s,
-                            background-color .1s,
-                            -webkit-transform .2s;
-                transition: transform .2s,
-                            width .4s cubicubic-bezier(1,0,0,1) .2s,
-                            background-color .1s;
-                transition: transform .2s,
-                            width .4s cubicubic-bezier(1,0,0,1) .2s,
-                            background-color .1s,
-                            -webkit-transform .2s;
-                transition: transform .2s,
-                            width .4s cubicubic-bezier(1,0,0,1) .2s,
-                            -webkit-transform .2s;
-                transition: transform .2s,
-                            width .4s .2s,
-                            -webkit-transform .2s; // .2s to delay then .4s to animate
+        transform: scaleY(0);
+
+        transition: transform .2s,
+                    width .4s cubic-bezier(1,0,0,1) .2s,
+                    background-color .1s;
+                // .2s to delay then .4s to animate
     }
     &__item:hover::before,
     &__item--active:before {
-        -webkit-transform: scaleY(1);
-                transform: scaleY(1); 
-                width: 100%; 
+
+        transform: scaleY(1); 
+        width: 100%; 
     }
 
     &__item:active:before {
@@ -220,19 +196,15 @@
         text-transform: uppercase;
         display: block;
         padding: 1.5rem 3rem;
-        display: -webkit-box;
-        display: -ms-flexbox;
         position: relative;
         z-index: 10;
         display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        align-items: center;
 
     }
-    &__link:hover{
+    // &__link:hover{
         
-    }
+    // }
 
     &__icon{
         width: 1.75rem;
@@ -255,3 +227,15 @@
 
 }
 
+
+////////////////////////////////
+//Hotel View Gallery
+.gallery {
+    display: flex;
+    
+    &__photo{
+        width: 100%;
+        // to avoid small white space underneith
+        display: block;
+    }
+}

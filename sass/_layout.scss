@@ -24,8 +24,6 @@
             
 }
 .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     
 }
@@ -50,12 +48,10 @@
     background-color: #fff;
     
     //TESTING 
-    height: 80rem;   
+    height: 100rem;   
     
     //flex: 1 means this content grows and occupies the remaining %
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
          
 
 }
