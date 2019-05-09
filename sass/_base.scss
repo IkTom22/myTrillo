@@ -19,7 +19,7 @@
     --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
 
 }
-$bp-largest: 75em;     // 1200px
+$bp-largest: 75em;     // 1200px 1200/16
 $bp-large: 68.75em;    // 1100px
 $bp-medium: 56.25em;   // 900px
 $bp-small: 37.5em;     // 600px
@@ -40,6 +40,9 @@ html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px, 10px / 16px = 62.5%
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
 }
 
 body {
