@@ -27,6 +27,11 @@
         -ms-flex-align: center;
             align-items: center;
             
+    @media only screen and (max-width: $bp-smallest){
+        flex-wrap: wrap;
+        align-content:space-around;
+        height: 11rem;
+    }        
 }
 .content {
     display: flex;

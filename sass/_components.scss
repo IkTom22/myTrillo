@@ -21,7 +21,13 @@
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;     
+            justify-content: center;    
+
+    @media only screen and (max-width: $bp-smallest){
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }         
     &__input {
         // form input does not altomatically inherit the global font or size
         font-family: inherit;
@@ -218,6 +224,10 @@
             justify-content: center;
             padding: 2rem;
         }
+        @media only screen and (max-width: $bp-small){
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
 
     }
     // &__link:hover{
@@ -230,6 +240,13 @@
         margin-right: 2rem;
         // currentColor is just the current color of the element or parent element
         fill: currentColor;
+
+        @media only screen and (max-width: $bp-small){
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
 
@@ -435,6 +452,7 @@
             -webkit-mask-size: cover;
             mask-image: url(../img/chevron-thin-right.svg);
             mask-size: cover;
+            //without the code below, background image is already set to the gray svg (older blowser) version
             background-image: none;
         }
         
@@ -551,6 +569,7 @@
     @media only screen and (max-width: $bp-medium){
         padding: 2.5rem 0;
     }
+
     &__book-now {
         font-size: 2rem;
         font-weight: 300;
